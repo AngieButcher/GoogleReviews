@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Widget Host</title>
+</head>
+<body style="margin:0;padding:0;">
+<!-- Your widget code -->
+<script src="https://cdn.commoninja.com/sdk/latest/commonninja.js" defer></script>
+<div class="commonninja_component pid-a39c2a8d-17cb-4076-b0e7-d81912222f88"></div>
+<script>
+function sendHeight() {
+  var height = document.body.scrollHeight;
+  window.parent.postMessage(height, '*');
+}
+window.onload = sendHeight;
+window.onresize = sendHeight;
+</script>
+</body>
+</html>
